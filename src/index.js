@@ -1,17 +1,23 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 Vue.use(VueRouter)
-import MintUI from "mint-ui"
+import Mintui from "mint-ui"
+Vue.use(Mintui)
 import "mint-ui/lib/style.css"
-import app from "./app.vue"
+import app from "./App.vue"
+import VueResource from "vue-resource"
+Vue.use(VueResource)
 import "../lib/mui/css/mui.min.css"
-
-Vue.use(MintUI)
+import "../lib/mui/css/icons-extra.css"
+import router from "./router"
 
 var vm=new Vue({
-    el: '#app',
-    render:c=>c(app)
+    el: "#app",
+    render:c=>c(app),
+    router
 })
+
+
 
 
 
